@@ -1,5 +1,7 @@
 var tl_header_1 = gsap.timeline();
 
+var tl_burger_1 = gsap.timeline();
+
 tl_header_1.from(".slider-title", {duration:1.2, x:-150, opacity:0, ease:"slow"})
 
 
@@ -64,5 +66,76 @@ AOS.init({
 
 
 });
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        let id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+// window.onscroll = function() {myFunction()};
+
+// var header = document.getElementById("header-scrolled");
+
+// var sticky = header.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
+
+const burgerBtn = document.querySelector(".header-open-btn");
+
+burgerBtn.addEventListener('click', function() {
+  let items = document.getElementsByClassName("header-nav-item");
+  for (item of items) {
+    if (item.classList.contains("header-nav-closed")) {
+      item.classList.remove("header-nav-closed");
+    }
+    else {
+      item.classList.add('header-nav-closed');
+    }
+  }
+  burgerBtn.classList.toggle('header-close-btn')
+})
+
+const takeOfferBTNs = document.querySelectorAll(".slider-btn");
+
+for (button of takeOfferBTNs) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.online-appointment').scrollIntoView({
+      behavior:'smooth',
+      block:'center'
+    });
+  });
+};
+
+const $header = $("#header-scrolled")
+let prevScroll
+let lastShowPos
+
+$(window).on("scroll", function() {
+  const scrolled = $(window).scrollTop()
+
+  if (scrolled > 100 && scrolled > prevScroll) {
+    $header.addClass("header-out")
+    lastShowPos = scrolled
+  } else if (scrolled <= Math.max(lastShowPos - 250, 0)) {
+    $header.removeClass("header-out")
+  }
+  prevScroll = scrolled
+});
+
 
 
