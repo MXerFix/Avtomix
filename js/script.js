@@ -67,6 +67,22 @@ AOS.init({
 
 });
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  var widthWind = document.querySelector('body').offsetWidth;
+  if (widthWind <= 568) { 
+    let items = document.getElementsByClassName("how-alteration-item");
+    for (item of items) {
+      item.setAttribute("data-aos", "fade-up")
+    }
+    let cards = document.getElementsByClassName("pref-card")
+    for (card of cards) {
+      card.setAttribute("data-aos", "zoom-in")
+    }
+  }
+});
+
+
+
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -79,20 +95,6 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
-
-// window.onscroll = function() {myFunction()};
-
-// var header = document.getElementById("header-scrolled");
-
-// var sticky = header.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
 
 const burgerBtn = document.querySelector(".header-open-btn");
 
