@@ -3,7 +3,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-image: url(../img/back.svg);
   background-size: contain;
-  background-position: 0px 1320px;
+  background-position: 0px 1040px;
 }
 
 
@@ -190,15 +190,17 @@ body {
   color: rgba(61, 76, 217, 0.2);
   display: block;
   margin: auto;
-  width: max-content;
+  width: fit-content;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   position: relative;
   line-height: 42px;
   margin-top: 120px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
   text-align: center;
+  background: url(../img/line.svg) no-repeat bottom;
 }
 
 .service-title-descr {
@@ -207,9 +209,6 @@ body {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 36px;
-  width: max-content;
-  min-width: max-content;
-  max-width: max-content;
   margin: auto;
   text-align: center;
   margin-top: 0;
@@ -398,6 +397,12 @@ body {
 .list-img {
   width: 72px;
   margin-right: 24px;
+}
+
+.service-alteration .service-title {
+}
+
+.service-alteration .service-title-descr {
 }
 
 .how-alteration {
@@ -646,7 +651,8 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
+  background-color: #fff;
 }
 
 .online-appointment .service-title {
@@ -657,6 +663,7 @@ body {
   width: 100%;
   height: 825px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 
