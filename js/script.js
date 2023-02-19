@@ -1,5 +1,4 @@
 var tl_header_1 = gsap.timeline();
-
 var tl_burger_1 = gsap.timeline();
 
 tl_header_1.from(".slider-title", {duration:1.2, x:-150, opacity:0, ease:"slow"})
@@ -67,6 +66,8 @@ AOS.init({
 
 });
 
+var widthWind = document.querySelector('body').offsetWidth;
+
 document.addEventListener("DOMContentLoaded", function(event) {
   var widthWind = document.querySelector('body').offsetWidth;
   if (widthWind <= 568) { 
@@ -79,6 +80,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
       card.setAttribute("data-aos", "zoom-in")
     }
   }
+
+  // if (widthWind <= 1279) {
+  //   let navItems = document.getElementsByClassName("header-nav-item")
+  //   for (navItem of navItems) {
+  //     if (navItem.classList.contains("header-nav-closed")) {
+  //       document.querySelector(".header-title").setAttribute("style", "display:none;");
+  //     }
+  //   }
+  // }
 });
 
 
@@ -103,8 +113,14 @@ burgerBtn.addEventListener('click', function() {
   for (item of items) {
     if (item.classList.contains("header-nav-closed")) {
       item.classList.remove("header-nav-closed");
+      if (widthWind <= 480) {
+        document.querySelector(".header-title").setAttribute("style", "visibility: visible; width:100%; padding:16px; margin:0; transition: all 0.4s")
+      }
     }
     else {
+      if (widthWind <= 480) {
+        document.querySelector(".header-title").setAttribute("style", "visibility:hidden; width:0px; padding:0; margin:0; transition: all 0.4s")
+      }
       item.classList.add('header-nav-closed');
     }
   }

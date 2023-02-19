@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Пункт техосмотра в Хабаровске. Внесение изменений в конструкцию транспортного средства.">
+  <meta name="keywords" content="техосмотр, конструкция тс, транспорт, сервис">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Автомикс</title>
+  <title>Автомикс | Технический осмотр транспортных средств</title>
 </head>
 
 <body>
@@ -23,7 +25,7 @@
     <div class="header-nav">
       <a href="#tehosmotr-scroll" class="header-nav-item">Техосмотр</a>
       <a href="#izmenenia-scroll" class="header-nav-item">Изменения</a>
-      <a href="#about-us-scroll" class="header-nav-item">О компании</a>
+      <a href="#about-us-scroll" id="about-us-nav" class="header-nav-item">О компании</a>
       <a href="#contact-us-scroll" class="header-nav-item">Контакты</a>
       <a class="header-open-btn"><img class="nav-home-icon" src="img/homeic.svg" alt=""></a>
       <!-- <svg class="nav-home-icon" width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +38,7 @@
   <div class="slider">
     <div class="slider-title">
       Профессиональный <br> технический осмотр Вашего ТС <br> <br>
-      <h2 id="slider-time">от 30 минут</h2> <br> Внесение изменений в конструкцию <br> транспортного средства
+      <h2 id="slider-time"></h2> <br> Внесение изменений в конструкцию <br> транспортного средства
     </div>
     <div class="slider-btn">
       Онлайн-запись
@@ -53,7 +55,10 @@
       <div class="service-inspection-download">
         <p>Постановление об установлении предельных размеров платы за проведение технического осмотра транспортных
           средств на территории Хабаровского края</p>
-        <a class="postanovlenie" download="" href=""><img src="img/downloadpdf.svg" alt=""></a>
+        <a class="postanovlenie" download href="files/dogovor_to_2023.docx"><img src="img/downloadpdf.svg" alt=""></a>
+      </div>
+      <div data-aos="fade-up" class="sanctions">
+        <p>Внимание! С 1 марта 2022 года в соответствии с ч. 1.1 ст. 12.5 КоАП РФ управление автомобилем без диагностической карты карается штрафом 2000 рублей.</p>
       </div>
       <!-- <div class="how-inspection">
         <div class="how-inspection-title">
@@ -100,11 +105,11 @@
         <p>Что необходимо иметь при себе <br> для прохождения техосмотра:</p>
       </div>
       <ul class="about-inspection-list">
-        <li id="passport" class="about-inspection-list-item"> <img class="list-img" src="img/passport.svg" alt="">
+        <li data-aos="fade-right" id="passport" class="about-inspection-list-item"> <img class="list-img" src="img/passport.svg" alt="">
           Паспорт и водительское удостоверение</li>
-        <li id="pts-sts" class="about-inspection-list-item"> <img src="img/pts-sts.svg" alt="" class="list-img"> ПТС или
+        <li data-aos="fade-right" id="pts-sts" class="about-inspection-list-item"> <img src="img/pts-sts.svg" alt="" class="list-img"> ПТС или
           СТС</li>
-        <li id="auto" class="about-inspection-list-item"> <img src="img/car.svg" alt="" class="list-img"> Исправный авто
+        <li data-aos="fade-right" id="auto" class="about-inspection-list-item"> <img src="img/car.svg" alt="" class="list-img"> Исправный авто
         </li>
       </ul>
       <div class="slider-btn">
@@ -265,9 +270,8 @@
       </div>
       <div class="block-50 worktime-info">
         <h3>График работы:</h3>
-        <p>Понедельник - четверг 8:00-21:00</p>
-        <p>Пятница - суббота 10:00-19:00</p>
-        <p>Воскресенье - выходной</p>
+        <p>Понедельник - Пятница 9:00-18:00</p>
+        <p>Суббота, Воскресенье - выходной</p>
       </div>
     </div>
     <div class="confidence-info">
@@ -283,9 +287,9 @@
       <a href=""><img src="img/foot-logo.svg" alt=""></a>
     </div>
     <div class="foot-nav">
-      <a class="foot-nav-item">Лицензии</a>
-      <a class="foot-nav-item">Документы</a>
-      <a class="foot-nav-item">Законы</a>
+      <a target="_blank" href="files/avtomix_claimor.webp" class="foot-nav-item">Лицензия</a>
+      <a target="_blank" href="files/dogovor_to_2023.pdf" class="foot-nav-item">Документы</a>
+      <a target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_115853/" class="foot-nav-item">Законы</a>
     </div>
   </div>
 </div>
