@@ -156,4 +156,28 @@ $(window).on("scroll", function() {
 });
 
 
+$(document).ready(function () {
+  $(document).on("scroll", onScroll);
+});
+
+function onScroll(event){
+  var scrollPos = $(document).scrollTop();
+  $('.mobile-menu a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() - 84 > scrollPos) {
+          $('.mobile-menu a').removeClass("active-menu-item");
+          currLink.addClass("active-menu-item");
+      }
+      else{
+          currLink.removeClass("active-menu-item");
+      }
+  });
+}
+
+if (widthWind < 577) {
+  gsap.from(".mobile-menu", {duration:1, ease:"bounce", y:70})
+}
+
+
 
