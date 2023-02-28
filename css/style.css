@@ -69,7 +69,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  width: max-content;
   max-width: 100%;
   height: max-content;
   border: solid 1px white;
@@ -82,12 +82,14 @@ a {
 }
 
 .header-nav-item {
+  width:max-content;
   color: white;
   margin-left: 36px;
   padding: 6px 12px;
-  font-size: 32px;
+  font-size: 28px;
   border-radius: 24px;
   transition: all .4s;
+  text-align:center;
 }
 
 .header-nav-item:hover {
@@ -115,6 +117,11 @@ a {
 .nav-home-icon:hover {
   content: url(../img/homeic_black.svg);
   transition: all .4s;
+}
+
+.izmenenya-nav {
+    width:fit-content;
+    text-align:center;
 }
 
 .header-nav-closed {
@@ -968,6 +975,8 @@ a {
 
 
 
+
+
 @media (max-width:1520px) {
 
   .content {
@@ -980,6 +989,7 @@ a {
 
   .header-nav-item {
     font-size: 24px;
+    margin-left:24px;
   }
 
   .nav-home-icon {
@@ -1012,6 +1022,20 @@ a {
   }
 
 
+}
+
+@media (max-width:1470px) {
+    .header-nav-item {
+        margin-left:16px;
+        font-size:20px;
+    }
+}
+
+@media (max-width:1350px) {
+    .header-nav-item {
+        margin-left:16px;
+        font-size:16px;
+    }
 }
 
 @media (min-width:1512px) {
@@ -1582,25 +1606,39 @@ a {
 
 @media (max-width:400px) {
   .header-nav-closed {
-    font-size: 12px !important;
-    padding: 8px 3px !important;
+    display: none;
   }
 
   .nav-home-icon {
     width: 32px;
     height: 32px;
   }
+
+  .header-nav {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
 }
 
 @media (max-width:370px) {
 
-  .container {
-    max-width: 300px;
+  .header-nav {
+    display: none;
   }
 
+  .footer {
+    display: none;
+  }
+  
   .header-nav-closed {
-    font-size: 11px !important;
-    padding: 8px 2px !important;
+    display: none;
+  }
+
+  .container {
+    max-width: 300px;
   }
 
   .nav-home-icon {
@@ -1688,15 +1726,29 @@ a {
 
 
 @media (max-width:360px) {
+  .header-nav {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+  
   .header-nav-closed {
-    font-size: 11px !important;
-    padding: 8px 2px !important;
+    display: none;
   }
 }
 
 @media (max-width:340px) {
+  .header-nav {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+  
   .header-nav-closed {
-    font-size: 10px !important;
-    padding: 8px 2px !important;
+    display: none;
   }
 }
